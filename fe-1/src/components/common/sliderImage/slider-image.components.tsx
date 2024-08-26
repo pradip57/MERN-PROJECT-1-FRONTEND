@@ -1,4 +1,4 @@
-interface SliderImageProps {
+type SliderImageProps = {
   image: string;
   alt?: string;
   link?: string;

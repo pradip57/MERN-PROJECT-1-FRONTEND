@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import logo from "../../assets/images/sajilo logo.png";
 const HomeHeader = () => {
   return (
@@ -8,7 +9,7 @@ const HomeHeader = () => {
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-[100px]">
                 <div className="shrink-0">
-                  <a href="#" title="" className="">
+                  <NavLink to="/" title="" className="">
                     <img
                       className="block w-auto h-8 dark:hidden scale-150"
                       src={logo}
@@ -19,54 +20,54 @@ const HomeHeader = () => {
                       src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/logo-full-dark.svg"
                       alt=""
                     />
-                  </a>
+                  </NavLink>
                 </div>
 
                 <ul className="hidden lg:flex items-center justify-start gap-6 md:gap-8 py-3 sm:justify-center">
                   <li>
-                    <a
-                      href="#"
+                    <NavLink
+                      to="/"
                       title=""
                       className="flex text-lg font-medium text-teal-600 hover:text-teal-900 dark:text-white dark:hover:text-primary-500"
                     >
                       Home
-                    </a>
+                    </NavLink>
                   </li>
                   <li className="shrink-0">
-                    <a
-                      href="#"
+                    <NavLink
+                      to="/categories"
                       title=""
                       className="flex text-lg font-medium text-teal-600 hover:text-teal-900 dark:text-white dark:hover:text-primary-500"
                     >
                       Categories
-                    </a>
+                    </NavLink>
                   </li>
                   <li className="shrink-0">
-                    <a
-                      href="#"
+                    <NavLink
+                      to="/brands"
                       title=""
                       className="flex text-lg font-medium text-teal-600 hover:text-teal-900 dark:text-white dark:hover:text-primary-500"
                     >
                       Brands
-                    </a>
+                    </NavLink>
                   </li>
                   <li className="shrink-0">
-                    <a
-                      href="#"
+                    <NavLink
+                      to="/products"
                       title=""
                       className="text-lg font-medium text-teal-600 hover:text-teal-900 dark:text-white dark:hover:text-primary-500"
                     >
                       Products
-                    </a>
+                    </NavLink>
                   </li>
                   <li className="shrink-0">
-                    <a
-                      href="#"
+                    <NavLink
+                      to="/offers"
                       title=""
                       className="text-lg font-medium text-teal-600 hover:text-teal-900 dark:text-white dark:hover:text-primary-500"
                     >
                       Offers
-                    </a>
+                    </NavLink>
                   </li>
                 </ul>
               </div>
@@ -122,12 +123,12 @@ const HomeHeader = () => {
                 >
                   <div className="grid grid-cols-2  rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600">
                     <div>
-                      <a
-                        href="#"
+                      <NavLink
+                        to="#"
                         className="truncate text-sm font-semibold leading-none text-gray-900  dark:text-white"
                       >
                         Apple iPhone 15
-                      </a>
+                      </NavLink>
                       <p className="mt-0.5 truncate text-sm font-normal text-gray-500 dark:text-gray-400">
                         $599
                       </p>
@@ -171,12 +172,12 @@ const HomeHeader = () => {
 
                   <div className="grid grid-cols-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600">
                     <div>
-                      <a
-                        href="#"
+                      <NavLink
+                        to="#"
                         className="truncate text-sm font-semibold leading-none text-gray-900 dark:text-white"
                       >
                         Apple iPad Air
-                      </a>
+                      </NavLink>
                       <p className="mt-0.5 truncate text-sm font-normal text-gray-500 dark:text-gray-400">
                         $499
                       </p>
@@ -220,12 +221,12 @@ const HomeHeader = () => {
 
                   <div className="grid grid-cols-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600">
                     <div>
-                      <a
-                        href="#"
+                      <NavLink
+                        to="#"
                         className="truncate text-sm font-semibold leading-none text-gray-900 dark:text-white"
                       >
                         Apple Watch SE
-                      </a>
+                      </NavLink>
                       <p className="mt-0.5 truncate text-sm font-normal text-gray-500 dark:text-gray-400">
                         $598
                       </p>
@@ -269,12 +270,12 @@ const HomeHeader = () => {
 
                   <div className="grid grid-cols-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600">
                     <div>
-                      <a
-                        href="#"
+                      <NavLink
+                        to="#"
                         className="truncate text-sm font-semibold leading-none text-gray-900 dark:text-white "
                       >
                         Sony Playstation 5
-                      </a>
+                      </NavLink>
                       <p className="mt-0.5 truncate text-sm font-normal text-gray-500 dark:text-gray-400">
                         $799
                       </p>
@@ -318,12 +319,12 @@ const HomeHeader = () => {
 
                   <div className="grid grid-cols-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600">
                     <div>
-                      <a
-                        href="#"
+                      <NavLink
+                        to="#"
                         className="truncate text-sm font-semibold leading-none text-gray-900 dark:text-white"
                       >
                         Apple iMac 20"
-                      </a>
+                      </NavLink>
                       <p className="mt-0.5 truncate text-sm font-normal text-gray-500 dark:text-gray-400">
                         $8,997
                       </p>
@@ -365,15 +366,15 @@ const HomeHeader = () => {
                     </div>
                   </div>
 
-                  <a
-                    href="#"
+                  <NavLink
+                    to="#"
                     title=""
                     className="mb-2 me-2 inline-flex w-full items-center justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
                     role="button"
                   >
                     {" "}
                     Proceed to Checkout{" "}
-                  </a>
+                  </NavLink>
                 </div>
 
                 <button
@@ -423,77 +424,26 @@ const HomeHeader = () => {
                 >
                   <ul className="p-2 text-start text-sm font-medium text-gray-900 dark:text-white">
                     <li>
-                      <a
-                        href="#"
+                      <NavLink
+                        to="#"
                         title=""
                         className="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600"
                       >
                         {" "}
-                        My Account{" "}
-                      </a>
+                        Log In{" "}
+                      </NavLink>
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <NavLink
+                        to="#"
                         title=""
                         className="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600"
                       >
                         {" "}
-                        My Orders{" "}
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        title=""
-                        className="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600"
-                      >
-                        {" "}
-                        Settings{" "}
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        title=""
-                        className="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600"
-                      >
-                        {" "}
-                        Favourites{" "}
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        title=""
-                        className="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600"
-                      >
-                        {" "}
-                        Delivery Addresses{" "}
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        title=""
-                        className="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600"
-                      >
-                        {" "}
-                        Billing Data{" "}
-                      </a>
+                        Register{" "}
+                      </NavLink>
                     </li>
                   </ul>
-
-                  <div className="p-2 text-sm font-medium text-gray-900 dark:text-white">
-                    <a
-                      href="#"
-                      title=""
-                      className="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600"
-                    >
-                      {" "}
-                      Sign Out{" "}
-                    </a>
-                  </div>
                 </div>
 
                 <button
@@ -530,52 +480,52 @@ const HomeHeader = () => {
             >
               <ul className="text-gray-900 dark:text-white text-sm font-medium dark:text-white space-y-3">
                 <li>
-                  <a
-                    href="#"
+                  <NavLink
+                    to="#"
                     className="hover:text-primary-700 dark:hover:text-primary-500"
                   >
                     Home
-                  </a>
+                  </NavLink>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <NavLink
+                    to="#"
                     className="hover:text-primary-700 dark:hover:text-primary-500"
                   >
                     Best Sellers
-                  </a>
+                  </NavLink>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <NavLink
+                    to="#"
                     className="hover:text-primary-700 dark:hover:text-primary-500"
                   >
                     Gift Ideas
-                  </a>
+                  </NavLink>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <NavLink
+                    to="#"
                     className="hover:text-primary-700 dark:hover:text-primary-500"
                   >
                     Games
-                  </a>
+                  </NavLink>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <NavLink
+                    to="#"
                     className="hover:text-primary-700 dark:hover:text-primary-500"
                   >
                     Electronics
-                  </a>
+                  </NavLink>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <NavLink
+                    to="#"
                     className="hover:text-primary-700 dark:hover:text-primary-500"
                   >
                     Home & Garden
-                  </a>
+                  </NavLink>
                 </li>
               </ul>
             </div>

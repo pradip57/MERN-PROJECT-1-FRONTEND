@@ -1,4 +1,4 @@
-interface HomeTitleProps {
+type HomeTitleProps = {
   title: string;
   link?: string | null;
 }

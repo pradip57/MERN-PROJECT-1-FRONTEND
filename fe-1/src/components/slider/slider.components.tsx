@@ -1,8 +1,8 @@
 import { Carousel } from "flowbite-react";
-import banner1 from "../../assets/images/banner1.webp";
-import banner2 from "../../assets/images/banner2.webp";
-import banner3 from "../../assets/images/banner3.webp";
-import banner4 from "../../assets/images/banner4.webp";
+import banner1 from "../../assets/images/bannerimage/banner1.webp";
+import banner2 from "../../assets/images/bannerimage/banner2.webp";
+import banner3 from "../../assets/images/bannerimage/banner3.webp";
+import banner4 from "../../assets/images/bannerimage/banner4.webp";
 import { SliderImage } from "../common/sliderImage/slider-image.components";
 export const Slider = () => {
   return (
