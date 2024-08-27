@@ -1,4 +1,16 @@
+import { useForm } from "react-hook-form";
+
 const LoginForm = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const submitEvent = (credentials: any) => {
+    console.log(credentials);
+  };
+
   return (
     <>
       <section className="bg-gray-50 dark:bg-gray-900">
@@ -19,7 +31,10 @@ const LoginForm = () => {
               <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                 Sign in to your account
               </h1>
-              <form className="space-y-4 md:space-y-6" action="#">
+              <form
+                className="space-y-4 md:space-y-6"
+                onSubmit={handleSubmit(submitEvent)}
+              >
                 <div>
                   <label
                     htmlFor="email"
@@ -28,13 +43,18 @@ const LoginForm = () => {
                     Your email
                   </label>
                   <input
+                    {...register("username", { required: true })}
                     type="email"
                     name="email"
                     id="email"
                     className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-teal-600 focus:border-teal-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="name@company.com"
-                    required
                   />
+                  <span className="text-red-800">
+                    {Object.prototype.hasOwnProperty.call(errors, "username")
+                      ? "Username is required"
+                      : ""}
+                  </span>
                 </div>
                 <div>
                   <label

@@ -14,29 +14,29 @@ const CategoryListHomepage = () => {
             <GridListsCategoryHomepage
               title=""
               alt=""
-              slug=""
-              link="/furnitures"
+              slug="category-details/furnitures"
+              link=""
               image={FurnitureCategory}
             />
             <GridListsCategoryHomepage
               title=""
               alt=""
-              slug=""
-              link="/electronics"
+              slug="category-details/electronics"
+              link=""
               image={ElectronicCategory}
             />
             <GridListsCategoryHomepage
               title=""
               alt=""
-              slug=""
-              link="/clothes"
+              slug="category-details/clothes"
+              link=""
               image={ClothesCategory}
             />
             <GridListsCategoryHomepage
               title=""
               alt=""
-              slug=""
-              link="/utensils"
+              slug="category-details/utensils"
+              link=""
               image={UtensilsCategory}
             />
           </div>

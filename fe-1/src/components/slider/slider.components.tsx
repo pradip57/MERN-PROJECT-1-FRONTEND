@@ -7,7 +7,7 @@ import { SliderImage } from "../common/sliderImage/slider-image.components";
 export const Slider = () => {
   return (
     <>
-      <div className="h-[500px]">
+      <div className="2xl:h-[500px]">
         <Carousel slideInterval={5000}>
           <SliderImage
             image={banner1}

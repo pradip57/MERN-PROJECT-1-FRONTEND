@@ -1,6 +1,12 @@
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/images/sajilo logo.png";
+import { useState } from "react";
+
+export interface UserInterface {
+  name: string;
+}
 const HomeHeader = () => {
+  const [user, setUser] = useState<UserInterface>();
   return (
     <>
       <div>
@@ -28,7 +34,7 @@ const HomeHeader = () => {
                     <NavLink
                       to="/"
                       title=""
-                      className="flex text-lg font-medium text-teal-600 hover:text-teal-900 dark:text-white dark:hover:text-primary-500"
+                      className="flex text-lg font-medium text-teal-600 hover:text-teal-900 dark:text-white dark:hover:text-teal-500"
                     >
                       Home
                     </NavLink>
@@ -37,7 +43,7 @@ const HomeHeader = () => {
                     <NavLink
                       to="/categories"
                       title=""
-                      className="flex text-lg font-medium text-teal-600 hover:text-teal-900 dark:text-white dark:hover:text-primary-500"
+                      className="flex text-lg font-medium text-teal-600 hover:text-teal-900 dark:text-white dark:hover:text-teal-500"
                     >
                       Categories
                     </NavLink>
@@ -46,7 +52,7 @@ const HomeHeader = () => {
                     <NavLink
                       to="/brands"
                       title=""
-                      className="flex text-lg font-medium text-teal-600 hover:text-teal-900 dark:text-white dark:hover:text-primary-500"
+                      className="flex text-lg font-medium text-teal-600 hover:text-teal-900 dark:text-white dark:hover:text-teal-500"
                     >
                       Brands
                     </NavLink>
@@ -55,7 +61,7 @@ const HomeHeader = () => {
                     <NavLink
                       to="/products"
                       title=""
-                      className="text-lg font-medium text-teal-600 hover:text-teal-900 dark:text-white dark:hover:text-primary-500"
+                      className="text-lg font-medium text-teal-600 hover:text-teal-900 dark:text-white dark:hover:text-teal-500"
                     >
                       Products
                     </NavLink>
@@ -64,7 +70,7 @@ const HomeHeader = () => {
                     <NavLink
                       to="/offers"
                       title=""
-                      className="text-lg font-medium text-teal-600 hover:text-teal-900 dark:text-white dark:hover:text-primary-500"
+                      className="text-lg font-medium text-teal-600 hover:text-teal-900 dark:text-white dark:hover:text-teal-500"
                     >
                       Offers
                     </NavLink>
@@ -369,7 +375,7 @@ const HomeHeader = () => {
                   <NavLink
                     to="#"
                     title=""
-                    className="mb-2 me-2 inline-flex w-full items-center justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                    className="mb-2 me-2 inline-flex w-full items-center justify-center rounded-lg bg-teal-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-teal-800 focus:outline-none focus:ring-4 focus:ring-teal-300 dark:bg-teal-600 dark:hover:bg-teal-700 dark:focus:ring-teal-800"
                     role="button"
                   >
                     {" "}
@@ -422,28 +428,107 @@ const HomeHeader = () => {
                   id="userDropdown1"
                   className="hidden z-10 w-56 divide-y divide-gray-100 overflow-hidden overflow-y-auto rounded-lg bg-white antialiased shadow dark:divide-gray-600 dark:bg-gray-700"
                 >
-                  <ul className="p-2 text-start text-sm font-medium text-gray-900 dark:text-white">
-                    <li>
-                      <NavLink
-                        to="#"
-                        title=""
-                        className="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600"
-                      >
-                        {" "}
-                        Log In{" "}
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        to="#"
-                        title=""
-                        className="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600"
-                      >
-                        {" "}
-                        Register{" "}
-                      </NavLink>
-                    </li>
-                  </ul>
+                  {user ? (
+                    <>
+                      <ul className="p-2 text-start text-sm font-medium text-gray-900 dark:text-white">
+                        <li>
+                          <NavLink
+                            to="#"
+                            title=""
+                            className="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600"
+                          >
+                            {" "}
+                            My Account{" "}
+                          </NavLink>
+                        </li>
+                        <li>
+                          <NavLink
+                            to="#"
+                            title=""
+                            className="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600"
+                          >
+                            {" "}
+                            My Orders{" "}
+                          </NavLink>
+                        </li>
+                        <li>
+                          <NavLink
+                            to="#"
+                            title=""
+                            className="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600"
+                          >
+                            {" "}
+                            Settings{" "}
+                          </NavLink>
+                        </li>
+                        <li>
+                          <NavLink
+                            to="#"
+                            title=""
+                            className="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600"
+                          >
+                            {" "}
+                            Favourites{" "}
+                          </NavLink>
+                        </li>
+                        <li>
+                          <NavLink
+                            to="#"
+                            title=""
+                            className="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600"
+                          >
+                            {" "}
+                            Delivery Addresses{" "}
+                          </NavLink>
+                        </li>
+                        <li>
+                          <NavLink
+                            to="#"
+                            title=""
+                            className="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600"
+                          >
+                            {" "}
+                            Billing Data{" "}
+                          </NavLink>
+                        </li>
+                      </ul>
+                      <div className="p-2 text-sm font-medium text-gray-900 dark:text-white">
+                        <NavLink
+                          to="#"
+                          title=""
+                          className="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600"
+                        >
+                          {" "}
+                          Sign Out{" "}
+                        </NavLink>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <ul className="p-2 text-start text-sm font-medium text-gray-900 dark:text-white">
+                        <li>
+                          <NavLink
+                            to="login"
+                            title=""
+                            className="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600"
+                          >
+                            {" "}
+                            Login{" "}
+                          </NavLink>
+                        </li>
+                        <li>
+                          <NavLink
+                            to="register"
+                            title=""
+                            className="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600"
+                          >
+                            {" "}
+                            Register{" "}
+                          </NavLink>
+                        </li>
+                      </ul>
+                    </>
+                  )}
                 </div>
 
                 <button
@@ -478,11 +563,11 @@ const HomeHeader = () => {
               id="ecommerce-navbar-menu-1"
               className="bg-gray-50 dark:bg-gray-700 dark:border-gray-600 border border-gray-200 rounded-lg py-3 hidden px-4 mt-4"
             >
-              <ul className="text-gray-900 dark:text-white text-sm font-medium dark:text-white space-y-3">
+              <ul className="text-gray-900 text-sm font-medium dark:text-white space-y-3">
                 <li>
                   <NavLink
                     to="#"
-                    className="hover:text-primary-700 dark:hover:text-primary-500"
+                    className="hover:text-teal-700 dark:hover:text-teal-500"
                   >
                     Home
                   </NavLink>
@@ -490,7 +575,7 @@ const HomeHeader = () => {
                 <li>
                   <NavLink
                     to="#"
-                    className="hover:text-primary-700 dark:hover:text-primary-500"
+                    className="hover:text-teal-700 dark:hover:text-teal-500"
                   >
                     Best Sellers
                   </NavLink>
@@ -498,7 +583,7 @@ const HomeHeader = () => {
                 <li>
                   <NavLink
                     to="#"
-                    className="hover:text-primary-700 dark:hover:text-primary-500"
+                    className="hover:text-teal-700 dark:hover:text-teal-500"
                   >
                     Gift Ideas
                   </NavLink>
@@ -506,7 +591,7 @@ const HomeHeader = () => {
                 <li>
                   <NavLink
                     to="#"
-                    className="hover:text-primary-700 dark:hover:text-primary-500"
+                    className="hover:text-teal-700 dark:hover:text-teal-500"
                   >
                     Games
                   </NavLink>
@@ -514,7 +599,7 @@ const HomeHeader = () => {
                 <li>
                   <NavLink
                     to="#"
-                    className="hover:text-primary-700 dark:hover:text-primary-500"
+                    className="hover:text-teal-700 dark:hover:text-teal-500"
                   >
                     Electronics
                   </NavLink>
@@ -522,7 +607,7 @@ const HomeHeader = () => {
                 <li>
                   <NavLink
                     to="#"
-                    className="hover:text-primary-700 dark:hover:text-primary-500"
+                    className="hover:text-teal-700 dark:hover:text-teal-500"
                   >
                     Home & Garden
                   </NavLink>

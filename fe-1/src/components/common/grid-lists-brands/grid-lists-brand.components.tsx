@@ -1,24 +1,22 @@
-import { NavLink } from "react-router-dom";
-
-type GridListsCategoryProps = {
+type GridListsBrandProps = {
   image: string;
   title: string;
   slug: string;
   alt?: string;
   link: string;
-}
+};
 
-export const GridListsCategoryHomepage = (props: GridListsCategoryProps) => {
+export const GridListsBrandHomepage = (props: GridListsBrandProps) => {
   return (
     <>
       <div>
-        <NavLink to={props.slug}>
+        <a href={props.link}>
           <img
             className="h-auto max-w-full rounded-lg"
             src={props.image}
             alt={props.alt}
           />
-        </NavLink>
+        </a>
       </div>
     </>
   );
