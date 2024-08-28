@@ -1,11 +1,19 @@
+import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
+import * as Yup from "yup";
 
 const LoginForm = () => {
+  const LoginDTO = Yup.object({
+    username: Yup.string().email().required(),
+    password: Yup.string().min(8).required(),
+  });
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm({
+    resolver: yupResolver(LoginDTO),
+  });
 
   const submitEvent = (credentials: any) => {
     console.log(credentials);
@@ -43,17 +51,15 @@ const LoginForm = () => {
                     Your email
                   </label>
                   <input
-                    {...register("username", { required: true })}
+                    {...register("username")}
                     type="email"
-                    name="email"
+                    name="username"
                     id="email"
                     className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-teal-600 focus:border-teal-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="name@company.com"
                   />
                   <span className="text-red-800">
-                    {Object.prototype.hasOwnProperty.call(errors, "username")
-                      ? "Username is required"
-                      : ""}
+                    {errors?.username?.message}
                   </span>
                 </div>
                 <div>
@@ -64,34 +70,18 @@ const LoginForm = () => {
                     Password
                   </label>
                   <input
-                    type="password"
+                    {...register("password")}
+                    type="text"
                     name="password"
                     id="password"
                     placeholder="••••••••"
                     className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-teal-600 focus:border-teal-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    required
                   />
+                  <span className="text-red-800">
+                    {errors?.password?.message}
+                  </span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <div className="flex items-start">
-                    <div className="flex items-center h-5">
-                      <input
-                        id="remember"
-                        aria-describedby="remember"
-                        type="checkbox"
-                        className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-teal-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-teal-600 dark:ring-offset-gray-800"
-                        required
-                      />
-                    </div>
-                    <div className="ml-3 text-sm">
-                      <label
-                        htmlFor="remember"
-                        className="text-gray-500 dark:text-gray-300"
-                      >
-                        Remember me
-                      </label>
-                    </div>
-                  </div>
                   <a
                     href="#"
                     className="text-sm font-medium text-teal-600 hover:underline dark:text-teal-500"
